@@ -1,12 +1,26 @@
+# This is the compiler.
 CXX=clang++
-objects=main.o
 
-hello: $(objects)
-	$(CXX) -o hello $(objects)
+# These are the flags.
+CFLAGS=-c -Wall -Wextra
+LDFLAGS=
 
-main.o: main.h
+# These are the source files.
+SOURCES=main.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+
+# Executable.
+EXECUTABLE=hello
+
+all: $(SOURCES) $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CXX) $(LDFLAGS) $(OBJECTS) -o $@
+
+.cpp.o:
+	$(CXX) $(CFLAGS) $< -o $@
 
 .PHONY: clean
 
 clean:
-	rm hello $(objects)
+	rm hello $(OBJECTS)
