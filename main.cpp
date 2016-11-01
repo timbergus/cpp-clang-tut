@@ -9,19 +9,25 @@
 using std::cin;
 using std::cout;
 using std::endl;
+using std::string;
 
-inline char keepWindowOpened() {
-  char ch;
+// int, double, char, string, bool
+
+inline string keepWindowOpened() {
+  string ch;
   cin >> ch;
   return ch;
 }
 
 int main() {
   char q = 'M';
-  double pepe = 3.4;
-  char result;
+  double pepe = sqrt(3.4);
+  string result;
+
   cout << "Hello World!" << endl;
   cout << q << pepe << endl;
   result = keepWindowOpened();
-  return result;
+  cout << "Hello " << result << "!" << endl;
+
+  return 0;
 }
