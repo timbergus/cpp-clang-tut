@@ -1,23 +1,6 @@
 /* Copyright 2016 Gustavo Muñoz */
 
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <cmath>
-
-using std::cin;
-using std::cout;
-using std::endl;
-using std::string;
-
-// int, double, char, string, bool
-
-inline string keepWindowOpened() {
-  string ch;
-  cin >> ch;
-  return ch;
-}
+#include "std_lib_facilities.hpp"
 
 int main() {
   char q = 'M';
@@ -25,8 +8,10 @@ int main() {
   string result;
 
   cout << "Hello World!" << endl;
+  cout << "Hello, programming!" << endl;
+  cout << "Here we go!" << endl;
   cout << q << pepe << endl;
-  result = keepWindowOpened();
+  result = keep_window_open();
   cout << "Hello " << result << "!" << endl;
 
   return 0;
