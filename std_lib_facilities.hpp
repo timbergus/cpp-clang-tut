@@ -8,8 +8,14 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
+using std::vector;
 
-// int, double, char, string, bool
+inline string isMarried(bool married) {
+  if (married) {
+    return "It's ";
+  }
+  return "It's not ";
+}
 
 inline string keep_window_open() {
   string ch;
