@@ -1,14 +1,16 @@
+// Copyright 2016 Gustavo Muñoz
+
+#ifndef SRC_STD_LIB_FACILITIES_HPP_
+#define SRC_STD_LIB_FACILITIES_HPP_
+
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
-#include <cmath>
 
 using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
-using std::vector;
 
 inline string isMarried(bool married) {
   if (married) {
@@ -22,3 +24,5 @@ inline string keep_window_open() {
   cin >> ch;
   return ch;
 }
+
+#endif  // SRC_STD_LIB_FACILITIES_HPP_

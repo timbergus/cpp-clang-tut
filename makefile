@@ -2,15 +2,15 @@
 CXX=clang++
 
 # These are the flags.
-CFLAGS=-c -std=c++14 -Wall -Wextra
+CFLAGS=-c -std=c++14 -Wall -Wextra -I ~/Downloads/emsdk-portable/emscripten/1.37.16/system/include
 LDFLAGS=
 
 # These are the source files.
-SOURCES=main.cpp
+SOURCES=src/main.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 
 # Executable.
-EXECUTABLE=cppclangtut
+EXECUTABLE=output/cppclangtut
 
 all: $(SOURCES) $(EXECUTABLE)
 
@@ -23,4 +23,4 @@ $(EXECUTABLE): $(OBJECTS)
 .PHONY: clean
 
 clean:
-	rm cppclangtut $(OBJECTS)
+	rm output/cppclangtut $(OBJECTS)
